@@ -24,9 +24,9 @@ typedef struct {
 
 // The array of tasks
 static sTask SCH_tasks_G[SCH_MAX_TASKS];
-static uint8_t array_Of_Task_ID[SCH_MAX_TASKS];
+//static uint8_t array_Of_Task_ID[SCH_MAX_TASKS];
 static uint32_t newTaskID = 0;
-static uint32_t rearQueue = 0;
+//static uint32_t rearQueue = 0;
 static uint32_t count_SCH_Update = 0;
 
 
@@ -37,7 +37,6 @@ void SCH_Init(void){
 }
 
 void SCH_Update(void){
-	// Check if there is a task at this location
 	count_SCH_Update ++;
 	if (SCH_tasks_G[0].pTask && SCH_tasks_G[0].RunMe == 0) {
 		if(SCH_tasks_G[0].Delay > 0){
